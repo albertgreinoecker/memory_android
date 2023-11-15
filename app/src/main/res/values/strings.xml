@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Ein einfaches Memory-Spiel</string>
+    <string name="pair">Ein Paar wurde gefunden!</string>
+    <string name="no_pair">Leider kein Paar</string>
+    <string name="open_second">Bitte eine zweite Karte öffnen</string>
+    <string name="finished">Spiel beendet, alle Karten sind aufgedeckt!</string>
+    <string name="seconds">Hier kommt der Timer hin</string>
+</resources>
