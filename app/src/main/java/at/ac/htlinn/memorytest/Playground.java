@@ -72,13 +72,13 @@ public class Playground {
         return anz;
     }
 
-    @Override
     public String toString() {
         String s = "";
         for(int i = 0; i < cards.length; i++) {
             for (int j = 0; j < cards[i].length; j++) {
-                s += cards[i][j];
+                s += String.format("%3d",cards[i][j]);
             }
+            s += "\n";
         }
         return s;
     }
