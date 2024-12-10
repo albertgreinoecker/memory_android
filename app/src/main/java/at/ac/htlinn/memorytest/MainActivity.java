@@ -2,6 +2,7 @@ package at.ac.htlinn.memorytest;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.res.Resources;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -63,6 +64,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 });
             }
         }
+        Log.d("MEMORYLOG", "Das ist die MEldung");
         timer.schedule(new CloseTask(),1000); //Clode cards in a second
     }
 
@@ -126,7 +128,20 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         }
     }
 
-    public static int[] getPicsArray() {
+    public  int[] getPicsArray() {
+        Resources resources = getResources();
+        int[] c = new int[20];
+        for (int i  = 0; i< c.length;i++)
+        {
+            // e.g R.drawable.i000;
+            String id = String.format("i%03d", i);
+            c[i] = resources.getIdentifier(id, "drawable", getPackageName() );
+        }
+        return c;
+    }
+
+/*
+        public static int[] getPicsArray() {
         int[] c = new int[20];
 
         c[0] = R.drawable.i000;
@@ -151,4 +166,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         c[19] = R.drawable.i019;
         return c;
     }
+    */
+
 }
